@@ -1,0 +1,99 @@
+- Week 3 
+  - Understand the workflow 
+  - Reading the dataset into python 
+  - Descriptive statistics 
+  - Distributions of data columns 
+      - ordered 
+      - unordered 
+  CRISP-DM Methodology 
+  - Tries to describe what we do in data science in a business context 
+      - Good to read up on it and understand the CRISPDM methodology 
+          - Understand the context of a data science project (Why are you doing this?)
+              - Motivation is business question
+          - We then find the data 
+              - Finding suitable data can be very challenging 
+          - Data preparation 
+          - Modelling 
+          - Evaluation of the model 
+          - At this stage you could 
+              - Ask another question or 
+              - Deploy your model into use 
+          - You may be asked about the cycle or bits about the cycle 
+  - Privacy 
+      - Discover structure from large amounts of data 
+      - You could draw some solid inferences from the data 
+      - Also true inside an organisation not just open government data 
+  - Correlation and causation 
+      - No link between the two
+      - Just because the number of conferences around COVID lowered when case numbers dropped, does not imply that more press conferences = more COVID cases 
+      - To explore if their is infact a relation, you would perform a test and then make observations 
+
+- Week 4 Visualisation 
+  - Understood the importance of having good graphs 
+  - Using seaborn 
+  - Talked about outliers
+      - Deciding whether or not to keep the outliers 
+- Week 5 Predictive modelling 
+  - Linear regression 
+  - Logistic regression - Easy way to predict categorical outcomes
+  - The above 2 models are the most important models in Data Science. These are simple models and are explainable models 
+  - Confusion matrix?
+  - The concept of training and testing data was introduced. This is fundamental part of ML and Data Science 
+  - Understand overfitting vs underfitting?
+  - Random selection of data from the sample population 
+- Week 6 
+  - Discussion around software engineering practices and data science 
+  - Is it really a good way to write code in a jupyter notebook?
+    - Many problems with the notebook format 
+    - Really its important to understand the concerns 
+    - Can you write tests to test your data?
+    - What is MSE and RSE?
+    - What is normalisation and how would you normalise the data?
+- Week 7
+  - Learned two types of learning 
+    - Supervised - Instances are labelled 
+      - Regression 
+      - Classification 
+      - What is the difference between the two?
+        - Depends on label type 
+          - Is label continous - Regression 
+          - Label is discrete - Classification problem 
+    - Unsupervised - Instances are not labelled
+      - The only model we studied was clustering 
+    - Clustering 
+      - KMeans 
+        - How the K means algo works?
+        - The steps
+          - How are centroids updated?
+            - Compute the centroid 
+              - Select randomly 
+              - Cluster (assign points closest to centroid)
+                - Centroid calculation: (Sum(x)/Number of points, Sum(y)/Number of points)
+              - Can we pick a better centroid?
+                - Yes? Then keep going 
+                - No? Stop. You are done
+        - We have to normalise the dataset as different units can be of different size 
+          - We could normalise by: (Parameter - mean of parameter)/Standard deviation of parameter
+          - This makes it a gaussian distribution
+        - How to pick K?
+          - Could use the elbow method
+          - If K is small then model is underfitting 
+          - If K is large model is overfitting  
+      - Heirarchical 
+        - Bottom up learning process 
+        - Join 2 closes points - this is cluster 1 
+        - Then join one more point which is closest to this cluster 
+        - How to define the distance between the 2 cluster  
+          - Closet point (single linkage)
+            - Distance of two cluster is measured as distance between 2 closest points in the clusters
+          - Complete linkage 
+            - Furthest two points in 2 clusters 
+          - Average linkage
+            - Measure distance between all points and measure average 
+          - Centroid linkage 
+            - Compute distance between centroids 
+          - How to chose number of clusters?
+            - Use dendogram 
+            - Draw a horizontal line to draw number of clusters 
+            - The number of intersections = number of clusters 
+            
